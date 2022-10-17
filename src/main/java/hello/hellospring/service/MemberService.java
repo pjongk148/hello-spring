@@ -3,11 +3,13 @@ package hello.hellospring.service;
 import hello.hellospring.domain.Member;
 import hello.hellospring.repository.MemberRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.swing.text.html.Option;
 import java.util.List;
 import java.util.Optional;
 
+@Transactional //jpa 은 모든 데이터 변경이 transactional 안에서 이루어져야 함
 public class MemberService {
 
     private final MemberRepository memberRepository;
