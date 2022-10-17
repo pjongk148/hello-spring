@@ -8,7 +8,6 @@ import javax.swing.text.html.Option;
 import java.util.List;
 import java.util.Optional;
 
-@Service //component 와 동일
 public class MemberService {
 
     private final MemberRepository memberRepository;
