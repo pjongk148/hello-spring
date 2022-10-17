@@ -25,15 +25,15 @@ public class MemberController {
         return "members/createMemberForm";
     }
 
-//    @PostMapping("/members/new")
-//    public String create(MemberForm form) {
-//        Member member = new Member();
-//        member.setName(form.getName());
-//
-//        memberService.join(member);
-//
-//        return "redirect:/";
-//    }
+    @PostMapping("/members/new")
+    public String create(MemberForm form) {
+        Member member = new Member();
+        member.setName(form.getName());
+
+        memberService.join(member);
+
+        return "redirect:/"; //회원가입 후 홈화면으로 돌려보냄
+    }
 
     @GetMapping("/members")
     public String list(Model model){
